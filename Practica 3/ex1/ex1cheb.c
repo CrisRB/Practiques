@@ -69,12 +69,12 @@ int main(int arg, char* argc[])
         {
             pxk+=(polinomi[j]*aux);
             aux*=(xk-x[j]);
-//	    printf("aux %lf ", aux);
+//      printf("aux %lf ", aux);
         }
         fprintf(sortida, "%.16G: pxk= %.16G fxk= %.16G \n", xk, pxk, f(xk));
-	if(fabs(pxk-f(xk))>errormax) errormax=fabs(pxk-f(xk));
-	pxk=0;
-	aux=1;
+        if(fabs(pxk-f(xk))>errormax) errormax=fabs(pxk-f(xk));
+        pxk=0;
+        aux=1;
     }
     printf("Error maxim %.16G\n",errormax);
     
@@ -91,9 +91,8 @@ double f(double x)
 
 double cheb(int j, double n)
 {
-    return cos((((2*j)+1)*PI)/((n)*2));
+    return cos((((2*j)+1)*PI)/(n*2));
 }
-
 
 double mig(double x, double y, double n, int a, int b)
 {
